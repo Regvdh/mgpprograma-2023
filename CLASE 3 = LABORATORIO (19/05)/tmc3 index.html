@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>FORMULARIO PARA COMPLETAR</h1>
+
+     <!--Etiquetas de formulario
+       - action ="#" =>ruta donde se van a enviar los datos de los imputs
+       - Method => forma de como se envian los datos, puede ser GET (a traves de la URL) y POST(de manera oculta)
+       - enctype => nos permite indicar que vamos a subir archivos, medio de identificacion
+            + multipart/form-data => permite que el formulario pueda subir cualquier tipo de archivos  --> 
+
+    <form action="#" method="" enctype="multipart/form-data"> 
+
+        <!-- el formulario va a constar de cajas de texto y botones de accion-->
+
+        <!--Cajas de texto = diferentes imuts que nosotros podemos tener 
+            - Se hacen con la etiqueta <input>, van a tener un type, ver types en el drive
+        Hagamos como que vamos a hacer un formulario de registro
+    PRIMERO ETIQUETA <lable> NOS PERMITE DAR IDENTIFICADOR A LA CAJA DE TEXTO
+        Los lable se enlazan con los input a traves de la etiqueta for="pongo id del input"
+        Importantes en los inputs de tipo radio (seleccion simple; marco 1) o check both (seleccion multiple)-->
+
+        <label for="nombre">Nombre:</label>
+
+<!--El imput a la vez va a tener toros parametros como, van a tener un id que nos va a permitir identificarlos
+        - placeholder => valor a la caja de texto que aparece en segundo plano, desaparece si el usuario ingresa un valor
+        - Required => si no completas el campo no anda
+        - Id=> nombre de identifiaccion del input
+        - Name=> nombre que le doy a la caja de texto en relacion al backend, si yo envio datos al back,
+         para leer ese dato debe llamar a la etiqueta nombre-->
+
+        <input id="nombre" type="text" placeholder=" ingresar dato" required> <br>
+        <label for="apellido">Apellido</label>
+        <input id="apellido" type="text" placeholder="ingresar dato" required> <br> 
+        <label for="mail">Email</label>
+        <input id="mail" type="email" required> <br> 
+        <label for="contrasenia"> Contraseña</label>
+        <input id="contrasenia" type="password" required> <br>
+
+<!--Input tipo radio: requieren del nombre ya que son de seleccion simple (se elige una sola opcion), 
+deben llamarse de la misma manera
+tener el mismo name para el backend 
+En los imputs en los que el usuario no introduce un valor, debe haber uno por defecto, esto se hace con la propiedad value
+VALUE => le asignamos 1 a m y 2 a f para que al backend lleguen numeros, opcion 1 u opcion 2-->
+
+        <label for="genero"> Genero</label>
+        <input id="genero" type="radio" name="sexo" value="1"> M 
+        <input id="genero" type="radio" name="sexo" value="2"> F 
+        <input id="genero" type="radio" name="sexo" value="3"> Otro
+
+        <br>
+        <!--Etiqueta <textarea> => permite poner mas de 50 caracteres crea un area de texto-->
+        
+            <label for="Describa">Describa su casa</label>
+            <textarea id="Describa"></textarea>
+
+            <br>
+
+        <!--Botones de accion: enviar la info, reenviar el formulario
+            -Se crean a traves del atributo button, poseen un atributo escencial que es el type, 
+            permite indicar de que forma va a ser => button (generar accion), submit (enviar info), reset (limpiar cajas de texto)
+            - Entre las dos etiquetas button va el nombre del boton
+            -NO USAR EL IMPUT DE TIPO SUBMIT, SOLO EL BOTON -->
+       
+            <button type="button"> Va a hacer algo</button>
+            <button type="submit"> Envia info</button>
+            <button type="reset"> Refresca </button>
+
+
+    </form>
+</body>
+</html>
