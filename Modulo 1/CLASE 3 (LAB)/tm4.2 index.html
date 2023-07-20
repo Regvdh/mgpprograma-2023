@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Version interna</title>
+    <!--VERSION 2; VA ADENTRO DE LAS CABECERAS -->
+    <style>
+/*Aca adentro van las propiedades o selectores con sus valores. Cuando tiene mas de un atributo se sepra con ;
+ Selectores de elemento:*/
+
+        /*selectores de elementos */
+            body{background-color: rgba(225, 185, 223, 0.471); }
+            h1{background-color: rgb(209, 171, 206);} 
+            h2{background-color: rgb(104, 9, 193); }
+            h2.colorBlack {color: red;}
+            p{color: black;} 
+
+        /*selectores de ID*/
+
+            #DC{color: cyan;}
+
+        /*selectores de ID*/
+
+            .prueba{color: rgb(165, 98, 10);}
+            
+
+/*selectores de clase. SOLO VA A AFECTAR A los atrivutos que digan class"nombre de la clase"*/
+
+*{color: rgb(174, 52, 76);}
+
+            
+
+    /*importante: reconocer en inspeccion de pagina entre las siguientes capas:
+        -Margin
+        -border
+        -padding
+      Cada etiqueta tiene las tres capas, cuando usemos unidad de medida tenemos que mirar si tiene que capas porque 
+    se tiene que restar al tamaño 
+    si pongo *{} se cambia todo lo que esta en el body*/
+
+    </style>
+</head>
+<body>
+     <h1>Mi hoja de vida </h1>
+    <div>
+        <h2 class="colorBlack">Perfil</h2> 
+        <p class="colorBlack"> Estudiante de medicina de tercer año, perseverante y entusiasta</p> <br> 
+    </div>
+    <hr> 
+    <div>
+        <h2 id="DC" style="color: aquamarine;"> Datos personales</h2>
+        <!--PRIORIDAD EN ESTE CASO: style: es una hoja de estilo en cascada, va a tomar la declaracion mas cercana al objeto-->
+        <p>Nombre: Regina </p> 
+        <p class="prueba">Apellido: Van der Horst</p> 
+        <p>Residencia: Mar del plata</p>
+        <p>Telefono: 22222222</p>
+        <p class="prueba">Mail: regivdhorst@gmail.com</p>
+
+    </div>
+    <hr>
+    <div>
+        <h2 id="DC">último grado obtenido</h2>
+        <!--Va a tomar el color que declare arriba en el selector de ID-->
+        <p class="prueba">Bachillerato en ciencias naturales</p>
+
+    </div>
+    <hr>
+    <div> 
+        <h2>Sin experiencia laboral previa</h2>
+    </div>
+</body>
+</html>
+
+<!--Elementos de prioridad dentro de la hoja de estilo: 1 style en linea (1), selector de id(2), selector de class(3)-->

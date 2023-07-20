@@ -1,0 +1,70 @@
+/*permite tener el codigo mas limpio*/
+body{background-color: rgba(225, 185, 223, 0.471); }
+h1{background-color: rgb(209, 171, 206);} 
+h2{background-color: rgb(104, 9, 193); }
+h2.colorBlack {color: red;}
+p{color: black;} 
+
+/*selectores de ID*/
+
+#DC{color: cyan;}
+
+/*selectores de ID*/
+
+.prueba{color: rgb(165, 98, 10);}
+
+/*selectores de clase. SOLO VA A AFECTAR A los atrivutos que digan class"nombre de la clase"*/
+
+*{color: rgb(174, 52, 76);}
+
+/* COMO COMBINAR LOS SELECTORES: estoy agrupando selectores de id, hago lo mismo con los de clase, en la segunda 
+selecotres de elemento, en la tercera combino agrupacion por selecor de elemento y clase
+"todo h2 que tenga como clase prueba2"
+Lo podemos combinar como nos pinte */
+
+#prueba1, #prueba2 {color: darkmagenta;}
+
+h1, p {color: black;}
+
+h2.prueba2 {color: forestgreen;} 
+
+h2 > .prueba2 {color: steelblue;} /*todos los h2 DONDE LA CLASE DEL ELEMENTO SEA PRUEBA 2*/
+
+div > p {color: deeppink;} /*todos los p que esten en un div*/
+
+/*pseudoclases: varian en funcion a lo que estemos usando.*/
+div p:nth-child(2) {color: darkorange;}
+
+/*permite indicar o seleccionar que elementos quiero cambiar de la propiedad, va el numero del elemento que quiero cambiar,
+ dentro de div el 2do div, elijo la psoicion del elemento*/
+ /*podemos ver otro ejempllo con la etiqueta de enlace a*/
+
+a:hover{font-size: 24px;}
+/*paso el cursor por el elemento y activo al cliquear el elemento, ej: enlace*/
+
+a:active {font-size: 44px;}
+
+a:visited {font-size: 64px;} 
+/*cambia la propiedad del enlace cuando la visitas*/
+
+p: :first-child {font: 1em sans-serif;}
+/* hace al primer elemento de la etiqueta en su defecto " el primer hijo". 
+Lo uso para trabajar enlaces de tipo menu*/ 
+
+p ::after {}
+/* inserta algo despues del contenido de cada elemento, uso la etiqueta p como podria ser cualquiera*/
+
+p ::before {}
+/*cambiamos atributos del multimedia como una imagen por ej*/ 
+
+/* esto se utiliza mayormente con los imputs*/
+
+input :focus { color: darkmagenta;} /* cambio caracteristicas del input*/ 
+
+input :required { color: rgb(7, 59, 192);} /* cambio caracteristicas del input requerido*/ 
+
+/*cambio solo el atributo*/
+ 
+[href]: {}
+[href= "valor"]: {}
+input [type= "email"] {}

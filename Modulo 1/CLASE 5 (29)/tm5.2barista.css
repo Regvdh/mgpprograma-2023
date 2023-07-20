@@ -1,0 +1,269 @@
+*{font-family: 'Inter', sans-serif,; }
+
+/*Google fonts va a tener muchos tipos de tipografias, podemos usarlas, del lado derecho tenemos la opcion de incluirla
+Por un enlace o a traves de un import, copiamos el link y lo pegamos en el documento HTML, en la cabecera, 
+en la hoja de estilo copio el nombre de la fuente y ya la peudo usar */
+
+/* CUSTOM DE PROPIEDADES o CUSTOM PROPERTY
+Nosotros podemos usar variables en la oja de estilo el pseudoelemento root nos permite crear parametros en mi hoja
+en funcion a variables. para crear variables se utiliza mayormente --Nvariable : valor; permite agilizar en funcion al diseño,
+ es de buena practica declarar todo en el root*/
+
+ :root{
+
+    --titulos:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    --parrafos: 'Inter', sans-serif,;
+    --colorprimario:rgba(65, 36, 9, 0.951); 
+    --colorsecundario:rgba(108, 59, 13, 0.951); 
+    --sizexl:'1000000px'; 
+    --sizexs:'50px'   
+}
+
+/*Ahora si voy a arrqancar a darle diseño creando las clases, elementos o ID, los selectores que concidere,
+ esto es un selector de clase que esta en la etiqueta h1 del html, esta declarada en el root con otra letra var titulos.
+  La utilidad es poder cambiar todo sin necesidad de cambiarlo uno por uno*/
+
+.tituloprincipal{font-family: var(--titulos);
+color: var(--colorprimario);
+}
+.importante{color:var(--colorprimario)}
+
+p{color:var(--colorsecundario);}
+
+body{
+    background-color: rgb(226, 174, 89);
+}
+
+header{ 
+  width: 100%;
+  padding: 60px;
+  background-color: rgb(108, 61, 0);
+}
+
+aside{width: 29%;
+background-color: rgb(226, 174, 89);
+font-family: var(--titulos);
+float: right;
+margin: 0px;
+}
+
+
+Main {width: 65%;
+background-color: rgb(230, 207, 174);
+float: left;
+padding-left: 5%;
+}
+
+main section img {
+  width: 100%;
+}
+
+/* Como aplicamos float en los anteriores el footer tiende a subir, vamos a usar una propiedad para que baje,
+ osea le vamos a decir que ya no hay float para que vaya a us lugar  */
+
+footer{
+width: 100%;
+background-color:var(--colorsecundario);
+border: 2px solid #000;
+clear: both;
+}
+
+.parrafo{
+  color: antiquewhite;
+  clear: both;
+  text-align: center;
+}
+
+
+/*//////////////////////A APRTIR DE ACA EDICION DE MENUS, PRIMERO EL DEL ASIDE Y DESPUES EL DEL FOOTER//////////////////////*/
+
+
+#menu{
+  margin: auto;
+  padding: left 20px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  width: 320px;
+}
+
+/*voy a deginir la posicion del padding, si quiero a la derecha padding-rigth, izquierda padding-left, arriba padding-top,
+ abajo padding-untop
+
+ Ahora vamos a personalizar la lista de elementos: */
+
+ #menu ul, #menuvertical ul{
+  list-style: none;
+  text-decoration: none;
+  margin: 0px;
+  padding: 0px;
+ }
+
+ /*ahora le estoy indicando que los cambios que vamos a hacer a continuacion van a aplicarse a donde este el ID menu,
+  donde haya una etiqueta ul y se siga por una etiqueta li. Le puse medidas y aplique la linea al costado de color
+  
+  Con float creo capas flotantes coloca el menu horizontal float:left; lo saque porque me cagaba la exisyencia,
+   todo depende de donde lo ponga, mueve todo para donde yo lo ponga por asi decirlo! mirar en aside y main*/
+
+ #menu ul li {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: 2px solid rgb(97, 49, 4); 
+ }
+
+ /*en el HTML pusmos las referencias del menu, vamos a personalizar la etiqueta <a>*/
+ #menu ul li a{
+  text-decoration: none;
+  color: rgb(79, 38, 8);
+ }
+
+ /*Vamos a hacer que cuando pase el cursor por arriba las lestras del menu cambien de color*/
+
+ #menu ul li a:hover { color: var(--colorsecundario);}
+ #menuvertical ul li a:hover {color: seashell;}
+
+ /*vamos a hacer ahora un menu vertical en el footrer*/
+
+ 
+ #menuvertical {
+  width: 150vh;
+  padding-left: 20px;
+  padding-top: 20px;
+  
+ }
+
+ /*hay dos propiedades: vh y vw, el vh o view port hacemos referencia a la forma visual del navegador tanto ancho como largo
+ defino cuanto ocupa para que se ajuste automaticamente al tamaño de la pantalla
+ 
+ Ahora vamos a editar las referencias del menu de abajo*/
+
+ footer div ul li a{
+  text-decoration: none;
+  padding: 15px 20px 15px 20px;
+  color: rgb(217, 143, 94);
+  float: left;
+  border-right: 2px solid rgb(217, 143, 94);
+ }
+
+/*//////////////////////A APRTIR DE ACA VAMOS A HACER LO DE LOS PRODUCTOS PARA VENDER, EL RESTO QUEDA COMO ESTÁ, fue//////////////////////*/
+
+/*Arranco editando la imagen*/
+
+article {
+  border: 2px solid;
+  width: 100%;
+  background-color: rgb(254, 205, 140);
+}
+
+aside article img {
+  float: right;
+  width: 50%;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 100%;
+  font-family:'Courier New', Courier, monospace;
+  font-size:small;
+}
+
+#sabores ul li{
+  text-decoration: none;
+}
+
+.colorT ul li{
+  list-style: none;
+  width: 30px;
+  display: inline-block;
+  height: 30px;
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 50%;
+}
+
+#tazaa{
+  background-color: brown;
+}
+
+#tazab {
+  background-color: coral;
+}
+
+/*AHORA VAMOS A HACER UN MENU DESPLEGABLE (lo voy a poner en el header como un menu nuevo*/
+
+/*header nav ul li {
+  list-style-type: none;
+  float: left;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  padding: 15px 20px 15px 20px;
+  color: rgb(10, 1, 1);
+  border-radius: 10px; /* JORGE agregue esto 
+ display: inline-block; 
+} */
+
+header nav ul li a:hover {
+    color: whitesmoke;
+    background-color: black;
+    box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.2);} 
+
+.oculto{
+  display: none;
+}
+
+#menudesplegable{
+  margin-top: 15px
+}
+
+#menudesplegable ul {
+  list-style: none;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+#menudesplegable ul a {
+  display:block ;
+  color: seashell;
+  text-decoration: none;
+  padding: 0px 15px;
+  line-height: 32px;
+}
+
+#menudesplegable ul li {
+  position: relative;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+}
+
+#menudesplegable ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  background-color: rgb(92, 51, 1);
+  padding: 0px;
+}
+
+#menudesplegable ul ul li {
+  float: none;
+  width: 100px;
+}
+
+#menudesplegable ul ul a {
+  padding: 10px 15px;
+}
+
+#menudesplegable ul li:hover > ul{
+  display: block;
+}
+
+#menudesplegable ul ul a:hover {
+  color: whitesmoke;
+  background-color: black;
+  box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.2);} 
+

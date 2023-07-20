@@ -1,0 +1,136 @@
+/* Vamos a arrancar con lo general para todo el documento, no va a tener margin, no va a tener padding
+ pero si va a tener box size, es una propiedad que indica el tamaño de la caja,
+  mayormente cunando hacemos referencia esto hablamos de que cuando nosotros inspeccionamos el elemento va a tener un tamaño 
+  especifico, si yo aplico content box llego a aplicar todo hasta el margin, con xoz saizing llego hasta el border   */
+
+* {
+    margin: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+/*Lo importante de ver aca es como el with y heit cambian los tamaños*/
+header {
+    background-color: rgb(184, 99, 184);
+    width: 100%;
+    height: 100px;
+    border-radius: 20px; /* JORGE agregue esto */
+    box-shadow: 4px 2px 4px 1px rgba(0, 0, 0, 0.2); /* JORGE agregue esto */
+}
+
+/*Le saque los puntitos con lsit style y lo puse en horizontal con float left*/
+header nav ul li {
+    list-style-type: none;
+    float: left;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    padding: 15px 20px 15px 20px;
+    color: rgb(10, 1, 1);
+    border-radius: 10px; /* JORGE agregue esto */
+    
+    /*Propiedad que nos ayuda a controlar o visualizar donde se va a ver un elemento dentro del HTML, ejemplo display,
+ tine ciertas formas o propiedades. Indica en su defecto el valor donde se va a visualizar el menu en el header,
+  por defaul se pone en linea display: inline;, va a quedar arriba. Si yo no quisiera mostrar el elemento le pongo none*/
+
+    display: inline-block;
+}
+
+/*AHORA vamos a ponerla pituca con un hover, ahoracuando pasas por arriba del menu no
+ solo cambia de color la letra sino tambien el fondo, copado*/
+
+header nav ul li a:hover {
+    color: whitesmoke;
+    background-color: black;
+    box-shadow: 1px 2px 4px 1px rgba(0, 0, 0, 0.2); /* JORGE agregue esto */
+}
+
+/*Ahora vamos a plotear el body y despues al main*/
+body {
+    background-color: rgb(255, 189, 243);
+}
+main {
+    background-color: rgb(249, 206, 246);
+    width: 77%;
+    float: left;
+    border-radius: 10px; /* JORGE agregue esto */
+    box-shadow: 4px 2px 4px 1px rgba(0, 0, 0, 0.2); /* JORGE agregue esto */
+}
+
+/* esto Oswal no lo hizo creo, cambie el ancho de la imagen para que no me ocupe absolutamente todo, bueno lo hizo,
+ asi definimos el maximo y el minimo tamaño que puede tener la etiqueta. 
+ el padding en la imagen es 0, que quiere decir? que entre la imagen y el border no va a haber lugar, si yo le pongo 10 
+ vamos a tener un espacio de color entre la imagen y el border*/
+#img {
+    max-width: 100%;
+    border: 1px solid #fff;
+    padding: 0px;
+}
+/*Margin solo da margenes*/
+main section {
+    margin: 10px;
+}
+
+/*Vamos a editar como se ve el texto, primero lo justificamos, con text align tenemos las mismas opciones para mover el texto 
+que en word. Segundo agregamos margen, con la propiedad margin button los parrafos se separan solo de abajo. 
+Segumos con un interlineado*/
+
+main section p {
+    text-align: justify;
+    margin-bottom: 2px;
+    line-height: 1.5em;
+}
+
+/*Ahora vamos a editar el titulo*/
+
+main section h1 {
+    margin-bottom: 20px;
+}
+
+/*Vamos a editar el aside*/
+aside {
+    width: 20%;
+    float: right;
+    background-color: rgb(120, 5, 93);
+    padding: 30px;
+    border-radius: 10px; /* JORGE agregue esto */
+    box-shadow: 4px 2px 4px 1px rgba(0, 0, 0, 0.2); /* JORGE agregue esto */
+}
+
+/*Prestar atencion a que cuando uso Ul es estilo, cuando uso el li es style type, en la parte de dotted estoy estableciendo otro tipo de 
+bordes al boton, osea, que se vea como puntitos*/
+
+aside ul li {
+    text-decoration: none;
+    color: rgb(251, 251, 251);
+    list-style-type: none;
+    margin-bottom: 30px;
+    border-bottom: 2px dotted seashell;
+}
+aside ul li a {
+    text-decoration: none;
+    color: seashell;
+}
+
+/*Ahora vamos a modificar los links como boton*/
+aside ul li a:hover {
+    color: rgb(177, 5, 160);
+}
+
+aside h2 {
+    color: seashell;
+    margin-bottom: 20px;
+}
+
+/*Ahora vamos con el footer, vamos a hacerlo bajar de una vez, para eso vamos a usar la propiedad para que limpie lo que es la caja de esa
+ nueva seccion. Esta etiqueta escencial es la de limpieza, es clear, que limpia basicamente, limpia el comportamiento o posiciones de sus 
+ elementos adyacentes, donde nosotros lo tengamos posicionado con float, puedo hacerlo a la derecha, a la izquierda, o ambos*/
+
+footer {
+    width: 98%;
+    background-color: rgb(104, 0, 83);
+    color: seashell;
+    clear: both;
+    border-radius: 10px; /* JORGE agregue esto */
+    box-shadow: 4px 2px 4px 1px rgba(0, 0, 0, 0.2); /* JORGE agregue esto */
+}

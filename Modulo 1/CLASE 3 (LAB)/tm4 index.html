@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clase 4- arrancamos con CSS</title>
+</head>
+<body>
+    <!--HOJAS DE ESTILO-->
+    <!--LOS SELECTORES => compuestos por 3 grupos, de clase, de identificadores y de elementos, 
+        mayormente usamos los de clase e identificadores 
+    en toda etiqueta HTML hay dos atributos esenciales que seran usados x CSS Y JS; ID y class
+Cambio la propiedad de todas las etiquetas sea donde sea que se encuentren en el documento -->
+
+        <!--Selectores de clase => se usa un .nombredela clase-->
+
+        <!--Selectores de identificadores (ID) => #nombredelelemento-->
+
+        <!--Selectores de elemento => cambia la propiedad completa de todas o una etiqueta correspondiente de HTML
+            Se hace etiquetaHTML {}-->
+
+        <h1 class="" id="">SELECTORES DE CLASE => 
+            <code>
+                .NC{}
+            </code>
+        </h1>
+
+        <h1 class="" id="">SELECTORES DE ID => 
+            <code>
+                #NC{}
+            </code>
+        </h1>
+
+        <H1 class="" id="">SELECTORES DE ELEMENTO => 
+            <code>
+                p{}
+                h1{} 
+            </code>
+        </H1>
+
+
+        <!--VERSIONES DEL CSS-->
+
+        <!--Inline =:> todas las etiquetas de HTML tienen tambien este atributo
+        Se agrega el atributo style que permite cambiar la propiedad unicamente al elemento que la contenga,
+    Puedo indicar propiedades como 
+        -color, 
+        -formato hexadecimal (color #000) nueral + pares de colores que estan en rgb, hago combinaciones -->
+
+    <!--Numeros exadecimales= Los números hexadecimales son números representados en base 16 
+        , que significa los dígitos 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F en lugar de solamente 0-9.-->
+
+        <p style="color: coral;">Ejemplo html prueba de la primera version con color y elijo</p>
+        <p style="color: #dd1797;">Ejemplo html prueba de la primera version con sistema hexadecimal</p>
+
+    <!--Formato color rgb => pongo color rgb y combino enporcentaje de cada color o del 0 al 255 0=negro 255=blanco-->
+
+         <p style="color: rgb(31 120 50);">Ejemplo html prueba de la primera version con sistema rgb</p>
+
+    <!--Formato rgba => a es opacidad, el valor alfa del color, es igual al anterior pero al final, 
+        como 4to valor incluyo uno entre 0 y 1-->
+    
+         <p style="color: rgba(100,20,84,0.5)">Ejemplo html prueba de la primera version con sistema rgb</p>
+</body>
+</html>

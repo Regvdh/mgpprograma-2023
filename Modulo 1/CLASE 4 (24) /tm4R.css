@@ -1,0 +1,135 @@
+/* el asterisco hace referencia a todo el documento, primero vamos a ver las fuentes
+No todos los equpos tienen todas las tipografias, yo puedo poner mas de una entonces si no tiene la ptimera usa la segunda*/
+
+*{font-family: 'Inter', sans-serif,; }
+
+/*Google fonts va a tener muchos tipos de tipografias, podemos usarlas, del lado derecho tenemos la opcion de incluirla
+Por un enlace o a traves de un import, copiamos el link y lo pegamos en el documento HTML, en la cabecera, 
+en la hoja de estilo copio el nombre de la fuente y ya la peudo usar */
+
+/* CUSTOM DE PROPIEDADES o CUSTOM PROPERTY
+Nosotros podemos usar variables en la oja de estilo el pseudoelemento root nos permite crear parametros en mi hoja
+en funcion a variables. para crear variables se utiliza mayormente --Nvariable : valor; permite agilizar en funcion al diseño,
+ es de buena practica declarar todo en el root*/
+
+ :root{
+
+    --titulos:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    --parrafos: 'Inter', sans-serif,;
+    --colorprimario:rgba(65, 36, 9, 0.951); 
+    --colorsecundario:rgba(108, 59, 13, 0.951); 
+    --sizexl:'1000000px'; 
+    --sizexs:'50px'   
+}
+
+/*Ahora si voy a arrqancar a darle diseño creando las clases, elementos o ID, los selectores que concidere,
+ esto es un selector de clase que esta en la etiqueta h1 del html, esta declarada en el root con otra letra var titulos.
+  La utilidad es poder cambiar todo sin necesidad de cambiarlo uno por uno*/
+
+.tituloprincipal{font-family: var(--titulos);
+color: var(--colorprimario);
+}
+.importante{color:var(--colorprimario)}
+
+p{color:var(--colorsecundario);}
+
+button{border: double;
+padding: 10px;
+box-sizing:border-box;
+border-radius: 0px 10px 10px 10px ;
+font-family: var(--titulos);
+background-color: rgb(238, 164, 73);}
+/*el border radius redondea la esquina de los botones, mientras mas valores yo aclare mas bordes cambia*/
+
+.btn2{background-color: rgb(94, 55, 3) ;
+color: antiquewhite;}
+
+header{ 
+  width: 100vw;
+}
+
+aside{width: 25%;
+background-color: rgb(226, 174, 89);
+font-family: var(--titulos);
+border: 2px solid #000;
+/*float:left*/}
+
+
+Main {width: 74%;
+background-color: rgb(230, 207, 174);
+border: 2px solid #000;
+/*float:right*/
+}
+
+/* Como aplicamos float en los anteriores el footer tiende a subir, vamos a usar una propiedad para que baje,
+ osea le vamos a decir que ya no hay float para que vaya a us lugar  */
+
+footer{width: 100%;
+background-color:var(--colorsecundario);
+border: 2px solid #000;
+}
+
+.parrafo{color: antiquewhite;}
+
+#menu{
+  margin: auto;
+  padding: left 20px;
+  padding-top: 5px;
+  width: 320px;
+}
+
+/*voy a deginir la posicion del padding, si quiero a la derecha padding-rigth, izquierda padding-left, arriba padding-top,
+ abajo padding-untop
+
+ Ahora vamos a personalizar la lista de elementos: */
+
+ #menu ul, #menuvertical ul{
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+ }
+
+ /*ahora le estoy indicando que los cambios que vamos a hacer a continuacion van a aplicarse a donde este el ID menu,
+  donde haya una etiqueta ul y se siga por una etiqueta li. Le puse medidas y aplique la linea al costado de color
+  
+  Con float creo capas flotantes coloca el menu horizontal float:left; lo saque porque me cagaba la exisyencia,
+   todo depende de donde lo ponga, mueve todo para donde yo lo ponga por asi decirlo! mirar en aside y main*/
+
+ #menu ul li {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: 2px solid rgb(97, 49, 4); 
+ }
+
+ /*en el HTML pusmos las referencias del menu, vamos a personalizar la etiqueta <a>*/
+ #menu ul li a{
+  text-decoration: none;
+  color: rgb(79, 38, 8);
+ }
+
+ /*Vamos a hacer que cuando pase el cursor por arriba las lestras del menu cambien de color*/
+
+ #menu ul li a:hover, #menuvertical ul li a:hover{ color: var(--colorsecundario);}
+
+ /*vamos a hacer ahora un menu vertical en el footrer*/
+
+ #menuvertical {
+    width: 150vh;
+    height: 100vh;
+    padding-left: 20px;
+    padding-top: 20px;
+ }
+
+ /*hay dos propiedades: vh y vw, el vh o view port hacemos referencia a la forma visual del navegador tanto ancho como largo
+ defino cuanto ocupa para que se ajuste automaticamente al tamaño de la pantalla
+ 
+ Ahora vamos a editar las referencias del menu de abajo*/
+
+ #menuvertical ul li a {
+  text-decoration:none;
+  box-shadow: 2px 2px 2px brown;
+  margin: 5px;
+  padding: 10px;
+  width: 250px;
+
+ }
