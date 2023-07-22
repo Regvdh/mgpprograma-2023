@@ -1,0 +1,233 @@
+/*font-family: 'Oswald', sans-serif;
+font-family: 'Roboto Slab', serif;*/
+
+*{ 
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*define el tamaño de la caja, de los elementos dentro del htm, establece como se calcula el 
+    alto y ancho de cada elemento*/
+
+}
+
+body {
+    background-color:#25003436 ;
+}
+
+header{
+    width: 100%;
+    height: 150px;
+    background-color: rgb(37 0 52 / 65%);
+    margin: 0px;
+}
+
+header img{
+    max-width: 150px;
+    float: left;
+}
+
+header nav ul {
+    list-style: none;
+    display: inline;
+}
+
+header nav ul li {
+    float: left;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+    margin-top: 65px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+
+}
+
+header nav ul li a:hover {
+    color: #250034;
+}
+/*Ahora vamos a crear nuestra tarjeta de productos*/
+
+main {
+    width: 70%;
+    background-color: #25003436;
+    float: left;
+    height: 100%; /*Vh significa vertical horizontal*/
+}
+
+main section h2 {
+    clear: both;
+}
+
+section {
+   margin: 10px;
+}
+
+main section .card {
+    max-width: 30%;
+    border: solid whitesmoke;
+    border-radius: 10px;
+    background-color: #5401742f;
+    padding-top: 10px;
+    margin-right: 10px;
+    float: left;
+}
+
+main section .card img {
+    max-width: 100%;
+    border-bottom: 2px solid #250034;   
+}
+
+main section .descripcion{
+    text-align: center;
+    line-height: 200%;
+    letter-spacing: 5px;
+    font-family: 'Oswald';
+    color: #13011b;
+    font-weight: bold;
+    font-size: 22px;
+}
+
+main section .precio {
+    text-align: right;
+    font-size: 18px;
+    color:rgb(56, 8, 56);
+    font-weight: bolder;
+    letter-spacing: 2px;
+    padding: 5px;
+}
+
+section .btn {
+    width: 100%;
+    background-color: #13011b;
+    height: 40px;
+    border-radius: 0px 0px 10px 10px ;
+   
+}
+
+section .btn input{
+    width: 50%;
+    float: left;
+    height: 40px;
+    background-color: #38044ed9;
+    border-radius: 0px 0px 10px 10px ;
+    color: whitesmoke;
+    font-family:'Oswald' ;
+    border: none;
+    cursor: pointer;
+}
+
+aside{
+    width: 30%;
+    height: 100vh;
+    background-color: #250034;
+    float: right;
+    padding: 20px;
+}
+
+aside nav ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+aside nav ul li {
+    
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'Oswald';
+}
+
+aside nav ul a {
+    text-decoration: none;
+    font-size: 20px;
+    padding-bottom: 20px;
+    color: whitesmoke;
+}
+
+aside nav ul li a:hover{
+    color: #df90ff;
+    border-bottom: 1px solid #df90ff;
+    
+}
+
+aside .formulario {
+    border: 1px solid whitesmoke;
+    border-radius: 10px 10px 10px 10px;
+
+}
+
+aside h2{
+    font-size: 20px;
+    font-family: 'Roboto Slab';
+    padding-top: 30px;
+    padding-bottom: 20px;
+    color: whitesmoke;
+    text-align: center;
+}
+
+aside form{
+    width: 100%;
+}
+
+aside form input, textarea {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    padding:  5px;
+    margin-bottom: 10px;
+    
+}
+
+aside form textarea {
+    height: 100px! important;
+    resize: none; /*Hace que no puedas cambiar el tampaño del text area*/
+}
+
+aside form button {
+    width: 100%;
+    height: 40px;
+    background-color: #72597b ;
+    border-radius: 0px 0px 10px 10px ;
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+    font-family:'Oswald' ;
+    border: none;
+    cursor: pointer
+}
+
+footer {
+    width: 100%;
+    padding: 80px;
+    background-color: rgb(37 0 52 / 65%);
+    clear: both;
+}
+
+footer .Empresa {
+    width: 50%;
+    float: left;
+}
+footer .redes {
+    float: right;
+}
+
+footer ul li{
+    list-style: none;
+    color: whitesmoke;
+    padding: 2px;
+    display: inline;
+    border-right: 1px solid whitesmoke;
+}
+
+footer ul li a {
+   
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+footer ul li a:hover{
+    background-color: whitesmoke;
+    color: black;
+}
